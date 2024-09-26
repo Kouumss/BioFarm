@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioFarm.API", "BioFarm.API\BioFarm.API.csproj", "{5F1C8CD6-D8C8-4170-AFEF-38C8A2BBE45F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioFarm.Core", "BioFarm.Core\BioFarm.Core.csproj", "{11A6EADF-A7EA-406A-9B57-D769B649B7E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioFarm.Infrastructure", "BioFarm.Infrastructure\BioFarm.Infrastructure.csproj", "{F779E417-B44F-444B-88AE-45861C7CC646}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F1C8CD6-D8C8-4170-AFEF-38C8A2BBE45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F1C8CD6-D8C8-4170-AFEF-38C8A2BBE45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F1C8CD6-D8C8-4170-AFEF-38C8A2BBE45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F1C8CD6-D8C8-4170-AFEF-38C8A2BBE45F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11A6EADF-A7EA-406A-9B57-D769B649B7E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11A6EADF-A7EA-406A-9B57-D769B649B7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11A6EADF-A7EA-406A-9B57-D769B649B7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11A6EADF-A7EA-406A-9B57-D769B649B7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F779E417-B44F-444B-88AE-45861C7CC646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F779E417-B44F-444B-88AE-45861C7CC646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F779E417-B44F-444B-88AE-45861C7CC646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F779E417-B44F-444B-88AE-45861C7CC646}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
