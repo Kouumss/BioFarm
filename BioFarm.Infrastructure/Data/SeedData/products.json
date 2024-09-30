@@ -4,7 +4,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 200,
     "PictureUrl": "/images/products/bocal-confiture-legumes.png",
-    "Type": "Processed Product",
+    "Type": "Conservable",
     "Brand": "Farmette",
     "QuantityInStock": 82
   },
@@ -13,7 +13,7 @@
     "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
     "Price": 150,
     "PictureUrl": "/images/products/bocal-pesto1.png",
-    "Type": "Processed Product",
+    "Type": "Conservable",
     "Brand": "Farmette",
     "QuantityInStock": 75
   },
@@ -22,7 +22,7 @@
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 180,
     "PictureUrl": "/images/products/bocal-sauce-legumes.png",
-    "Type": "Processed Product",
+    "Type": "Conservable",
     "Brand": "Farmette",
     "QuantityInStock": 3
   },
@@ -31,7 +31,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 300,
     "PictureUrl": "/images/products/herbe-basilic1.png",
-    "Type": "Herbs",
+    "Type": "Herbes",
     "Brand": "Nature",
     "QuantityInStock": 52
   },
@@ -40,7 +40,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 250,
     "PictureUrl": "/images/products/herbe-coriandre1.png",
-    "Type": "Herbs",
+    "Type": "Herbes",
     "Brand": "Nature",
     "QuantityInStock": 97
   },
@@ -49,7 +49,7 @@
     "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
     "Price": 120,
     "PictureUrl": "/images/products/herbe-estragon1.png",
-    "Type": "Herbs",
+    "Type": "Herbes",
     "Brand": "Nature",
     "QuantityInStock": 37
   },
@@ -58,7 +58,7 @@
     "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 10,
     "PictureUrl": "/images/products/herbe-menthe1.png",
-    "Type": "Herbs",
+    "Type": "Herbes",
     "Brand": "Nature",
     "QuantityInStock": 32
   },
@@ -67,7 +67,7 @@
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 8,
     "PictureUrl": "/images/products/herbe-persil1.png",
-    "Type": "Herbs",
+    "Type": "Herbes",
     "Brand": "Nature",
     "QuantityInStock": 6
   },
@@ -76,7 +76,7 @@
     "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 15,
     "PictureUrl": "/images/products/herbe-romarin1.png",
-    "Type": "Herbs",
+    "Type": "Herbes",
     "Brand": "Nature",
     "QuantityInStock": 17
   },
@@ -85,7 +85,7 @@
     "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
     "Price": 18,
     "PictureUrl": "/images/products/herbe-thym1.png",
-    "Type": "Herbs",
+    "Type": "Herbes",
     "Brand": "Nature",
     "QuantityInStock": 74
   },
@@ -94,7 +94,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 15,
     "PictureUrl": "/images/products/legume-ail1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 19
   },
@@ -103,7 +103,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
     "Price": 16,
     "PictureUrl": "/images/products/legume-aubergine1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 77
   },
@@ -112,7 +112,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 14,
     "PictureUrl": "/images/products/legume-brocoli1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 45
   },
@@ -121,7 +121,7 @@
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 15,
     "PictureUrl": "/images/products/legume-brocoli2.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 49
   },
@@ -130,7 +130,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 14.99,
     "PictureUrl": "/images/products/legume-carotte1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 28
   },
@@ -139,7 +139,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 11.99,
     "PictureUrl": "/images/products/legume-carotte2.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 34
   },
@@ -148,7 +148,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 31.99,
     "PictureUrl": "/images/products/legume-choux.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 69
   },
@@ -157,7 +157,7 @@
     "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
     "Price": 12,
     "PictureUrl": "/images/products/legume-courgette1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 35
   },
@@ -166,7 +166,7 @@
     "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
     "Price": 8,
     "PictureUrl": "/images/products/legume-courgette2.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 35
   },
@@ -175,7 +175,7 @@
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 11,
     "PictureUrl": "/images/products/legume-epinard1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 27
   },
@@ -184,7 +184,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
     "Price": 16,
     "PictureUrl": "/images/products/legume-haricot1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 77
   },
@@ -193,7 +193,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 14,
     "PictureUrl": "/images/products/legume-navet2.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 45
   },
@@ -202,7 +202,7 @@
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 21,
     "PictureUrl": "/images/products/legume-oignon1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 49
   },
@@ -211,7 +211,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 12.99,
     "PictureUrl": "/images/products/legume-poivron1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 28
   },
@@ -220,7 +220,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 16.99,
     "PictureUrl": "/images/products/legume-poivron3.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 28
   },
@@ -229,7 +229,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 21.99,
     "PictureUrl": "/images/products/legume-poivron2.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 28
   },
@@ -238,7 +238,7 @@
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 22.99,
     "PictureUrl": "/images/products/legume-pommesdeterre1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 34
   },
@@ -247,7 +247,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 14.99,
     "PictureUrl": "/images/products/legume-salade2.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 69
   },
@@ -256,7 +256,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 17.99,
     "PictureUrl": "/images/products/legume-salade4.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 69
   },
@@ -265,7 +265,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 13.99,
     "PictureUrl": "/images/products/legume-tomate1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 112
   },
@@ -274,7 +274,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 199.99,
     "PictureUrl": "/images/products/legume-tomate2.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 21
   },
@@ -283,7 +283,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 199.99,
     "PictureUrl": "/images/products/legumes-betterave1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 43
   },
@@ -292,7 +292,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 123.99,
     "PictureUrl": "/images/products/legumes-navet1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 29
   },
@@ -301,7 +301,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 43,
     "PictureUrl": "/images/products/legumes-radis1.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 32
   },
@@ -310,7 +310,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 11,
     "PictureUrl": "/images/products/legumes-salade3.png",
-    "Type": "Vegetables",
+    "Type": "Légumes",
     "Brand": "Eden",
     "QuantityInStock": 45
   },
@@ -319,7 +319,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 86,
     "PictureUrl": "/images/products/legumineuse-poidschiche1.png",
-    "Type": "Pulses",
+    "Type": "Légumineuse",
     "Brand": "Eden",
     "QuantityInStock": 33
   },
@@ -328,7 +328,7 @@
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 15,
     "PictureUrl": "/images/products/legumineuse-lentille1.png",
-    "Type": "Pulses",
+    "Type": "Légumineuse",
     "Brand": "Eden",
     "QuantityInStock": 19
   }

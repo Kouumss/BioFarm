@@ -26,7 +26,7 @@ app.MapControllers();
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
 
 try
-{
+{ 
     using var scope = app.Services.CreateScope();
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<StoreContext>();
