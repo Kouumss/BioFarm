@@ -1,13 +1,11 @@
 using BioFarm.Core.Entities;
 using BioFarm.Core.Interfaces;
-using BioFarm.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace BioFarm.API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
-public class ProductsController(IProductRepository repo) : ControllerBase
+public class ProductsController(IGenericRepository<Product> repo) : ControllerBase
 {
     #region Methods 
 
@@ -15,14 +13,14 @@ public class ProductsController(IProductRepository repo) : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(string? brand, string? type, string? sort)
     {
-        return Ok(await repo.GetProductsAsync(brand, type, sort));
+        return Ok(await repo.ListAllAsync());
     }
 
     // GET BY ID
     [HttpGet("{id:guid}")]
     public async Task<ActionResult<Product>> GetProductById(Guid id)
     {
-        Product? product = await repo.GetProductByIdAsync(id);
+        Product? product = await repo.GetByIdAsync(id);
         if (product is null)
             return NotFound();
         return product;
@@ -31,9 +29,9 @@ public class ProductsController(IProductRepository repo) : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Product>> CreateProduct(Product product)
     {
-        repo.AddProduct(product);
+        await repo.AddAsync(product);
 
-        if (await repo.SaveChangesAsync())
+        if (await repo.SaveAllAsync())
             return CreatedAtAction("GetProductById", new { id = product.Id }, product);
 
         return BadRequest("Problem creating the product");
@@ -44,12 +42,12 @@ public class ProductsController(IProductRepository repo) : ControllerBase
     public async Task<ActionResult<Product>> UpdateProduct(Guid id, Product product)
     {
 
-        if (product.Id != id || !ProductExists(id))
+        if (product.Id != id || !await ProductExists(id))
             return BadRequest("Cannot update this product");
 
-        repo.UpdateProduct(product);
+        await repo.UpdateAsync(product);
 
-        if (await repo.SaveChangesAsync())
+        if (await repo.SaveAllAsync())
             return NoContent();
 
         return BadRequest("Problem updating the product");
@@ -60,14 +58,14 @@ public class ProductsController(IProductRepository repo) : ControllerBase
     public async Task<ActionResult> DeleteProduct(Guid id)
     {
 
-        var product = await repo.GetProductByIdAsync(id);
+        var product = await repo.GetByIdAsync(id);
 
         if (product is null)
             return NotFound();
 
-        repo.DeleteProduct(product);
+        await repo.RemoveAsync(product);
 
-        if (await repo.SaveChangesAsync())
+        if (await repo.SaveAllAsync())
             return NoContent();
 
         return BadRequest("Problem deleting the product");
@@ -76,19 +74,21 @@ public class ProductsController(IProductRepository repo) : ControllerBase
 
     [HttpGet("brands")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetBrands()
-    {
-        return Ok(await repo.GetBrandsAsync());
+    {   
+        //IMPLEMENT 
+        return Ok();
     }
 
     [HttpGet("types")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
-    {
-        return Ok(await repo.GetTypesAsync());
+    {   
+        //IMPLEMENT 
+        return Ok();
     }
 
-    private bool ProductExists(Guid id)
+    private async Task<bool> ProductExists(Guid id)
     {
-        return repo.ProductExists(id);
+        return await repo.ExistsAsync(id);
     }
     #endregion
 
