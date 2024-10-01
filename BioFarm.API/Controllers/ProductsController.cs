@@ -1,5 +1,6 @@
 using BioFarm.Core.Entities;
 using BioFarm.Core.Interfaces;
+using BioFarm.Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BioFarm.API.Controllers;
@@ -12,9 +13,13 @@ public class ProductsController(IGenericRepository<Product> repo) : ControllerBa
     // GET ALL
     [HttpGet]
     public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(string? brand, string? type, string? sort)
-    {
-        return Ok(await repo.ListAllAsync());
-    }
+    {   
+        var spec = new ProductSpecification(brand, type, sort);
+
+        var products = await repo.ListAsync(spec);
+
+        return Ok(products);
+    }  
 
     // GET BY ID
     [HttpGet("{id:guid}")]
