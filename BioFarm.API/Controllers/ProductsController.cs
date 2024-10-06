@@ -1,3 +1,4 @@
+using BioFarm.API.RequestHelpers;
 using BioFarm.Core.Entities;
 using BioFarm.Core.Interfaces;
 using BioFarm.Core.Specifications;
@@ -12,14 +13,20 @@ public class ProductsController(IGenericRepository<Product> repo) : ControllerBa
 
     // GET ALL
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(string? brand, string? type, string? sort)
-    {   
-        var spec = new ProductSpecification(brand, type, sort);
+    public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(
+        [FromQuery] ProductSpecParams specParams) // Default FromBody with [APICONTROLLER]
+    {
+        var spec = new ProductSpecification(specParams);
 
         var products = await repo.ListAsync(spec);
 
-        return Ok(products);
-    }  
+        var count = await repo.CountAsync(spec);
+
+        var pagination = new Pagination<Product>(specParams.PageIndex,
+        specParams.PageSize, count, products);
+
+        return Ok(pagination);
+    }
 
     // GET BY ID
     [HttpGet("{id:guid}")]
@@ -75,11 +82,11 @@ public class ProductsController(IGenericRepository<Product> repo) : ControllerBa
 
         return BadRequest("Problem deleting the product");
     }
-  
+
 
     [HttpGet("brands")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetBrands()
-    {   
+    {
         var spec = new BrandListSpecification();
 
         return Ok(await repo.ListAsync(spec));
@@ -87,7 +94,7 @@ public class ProductsController(IGenericRepository<Product> repo) : ControllerBa
 
     [HttpGet("types")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
-    {   
+    {
         var spec = new TypeListSpecification();
 
         return Ok(await repo.ListAsync(spec));

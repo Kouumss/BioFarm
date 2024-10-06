@@ -10,10 +10,10 @@ public interface IGenericRepository<T> where T : class
     Task<TResult?> GetEntityWithSpec<TResult>(ISpecification<T, TResult> spec);
     Task<IReadOnlyList<TResult>> ListAsync<TResult>(ISpecification<T, TResult> spec);
 
-
     Task AddAsync(T entity);
     Task UpdateAsync(T entity);
     Task RemoveAsync(T entity);
     Task<bool> SaveAllAsync();
     Task<bool> ExistsAsync(Guid id);
+    Task<int> CountAsync(ISpecification<T> spec);
 }
