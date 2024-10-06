@@ -1,3 +1,4 @@
+using BioFarm.API.Middleware;
 using BioFarm.Core.Interfaces;
 using BioFarm.Infrastructure.Data;
 using BioFarm.Infrastructure.Data.Repositories;
@@ -20,6 +21,9 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+//Middleware
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.MapControllers();
 
