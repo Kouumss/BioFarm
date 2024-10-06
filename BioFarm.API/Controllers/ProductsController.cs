@@ -5,27 +5,17 @@ using BioFarm.Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BioFarm.API.Controllers;
-[Route("api/[controller]")]
-[ApiController]
-public class ProductsController(IGenericRepository<Product> repo) : ControllerBase
+
+public class ProductsController(IGenericRepository<Product> repo) : BaseApiController
 {
     #region Methods 
 
     // GET ALL
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(
-        [FromQuery] ProductSpecParams specParams) // Default FromBody with [APICONTROLLER]
+    public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts([FromQuery] ProductSpecParams specParams) // With [APICONTROLLER] request are by Default FromBody   
     {
         var spec = new ProductSpecification(specParams);
-
-        var products = await repo.ListAsync(spec);
-
-        var count = await repo.CountAsync(spec);
-
-        var pagination = new Pagination<Product>(specParams.PageIndex,
-        specParams.PageSize, count, products);
-
-        return Ok(pagination);
+        return await CreatePageResult(repo, spec, specParams.PageIndex, specParams.PageSize);
     }
 
     // GET BY ID
