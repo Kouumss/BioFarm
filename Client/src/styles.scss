@@ -12,14 +12,26 @@ $customTheme: mat.define-theme();
   @include mat.all-component-themes($customTheme);
 
   // override the button styles
-  .mdc-button, .mdc-raised-button, .mdc-stroked-button, .mdc-flat-button {
+  .mdc-button,
+  .mdc-raised-button,
+  .mdc-stroked-button,
+  .mdc-flat-button {
     @apply rounded-md;
+    background-color: white !important;
+    color: green !important;
+    border: 1px solid green !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    transition: ease-in-out 2ms !important;
+
+    &:hover{
+      background-color: green !important;
+      color: white !important;
+      border: 1px solid white !important;
+    }
+  }
+
+
+  .container {
+    width: 95%;
   }
 }
-
-.container {
-  @apply mx-auto max-w-screen-2xl;
-}
-
-
-
