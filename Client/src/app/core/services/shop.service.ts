@@ -13,6 +13,7 @@ export class ShopService {
   // ============================
   // Propriétés
   // ============================
+
   public baseUrl = 'https://localhost:5001/api/'
   private http = inject(HttpClient);
 
@@ -22,7 +23,6 @@ export class ShopService {
   // ============================
   // Méthodes
   // ============================
-
 
   getProducts(shopParams: ShopParams) {
 
@@ -38,6 +38,10 @@ export class ShopService {
 
     if(shopParams.sort) {
       params = params.append('sort', shopParams.sort);
+    }
+
+    if(shopParams.search) {
+      params = params.append("search", shopParams.search)
     }
 
     params = params.append('pageSize', shopParams.pageSize);
