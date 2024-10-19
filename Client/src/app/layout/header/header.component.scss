@@ -1,4 +1,16 @@
 // NAVBAR SHOPPING CART AND BUTTON
+header{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background-color: black;
+  color: #FFFFFF !important;
+}
+
+nav ul li{
+  text-transform: uppercase !important;
+}
+
 .custom-badge .mat-badge-content {
   width: 24px;
   height: 24px;
@@ -10,4 +22,21 @@
   font-size: 32px;
   width: 32px;
   height: 32px;
+}
+
+@media (max-width: 425px) {
+  #button-mobile-menu{
+    justify-content: center !important;
+  }
+
+  .mobile-menu ul{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .mobile-menu ul li{
+    width: 100% !important;
+    margin: auto !important;
+    text-align: center !important;
+  }
 }

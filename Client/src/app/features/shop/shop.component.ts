@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, ViewEncapsulation } from '@angular/core';
 import { ShopService } from '../../core/services/shop.service';
 import { Product } from '../../shared/models/product';
 import { ProductItemComponent } from "./product-item/product-item.component";
@@ -28,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   templateUrl: './shop.component.html',
-  styleUrl: './shop.component.scss'
+  styleUrl: './shop.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class ShopComponent implements OnInit {
 

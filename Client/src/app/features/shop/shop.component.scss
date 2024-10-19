@@ -1,0 +1,71 @@
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Une seule colonne */
+  gap: 0.75rem;
+  margin: 0.5rem;
+  width: 85%;
+}
+
+.option {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 0.75rem !important;
+  align-items: center;
+  justify-content: center;
+}
+form{
+  width: 100% !important;
+}
+
+form input{
+  width: 100% !important;
+}
+
+mat-paginator .mat-mdc-paginator-container {
+  display: flex !important;
+  justify-content: center !important;
+  background-color: #FFF;
+}
+
+@media (min-width: 1280px) {
+  .option {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1094px) and (min-width: 768px) {
+    .option {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .shop-container{
+    width: 95% !important;
+  }
+  mat-paginator{
+    flex-basis: 100% !important;
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .option {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  mat-paginator{
+    flex-basis: 100% !important;
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .option {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.95rem !important;
+  }
+  .search{
+    width: 100% !important;
+  }
+  mat-paginator .mat-mdc-paginator-page-size {
+    display: none !important;
+  }
+}

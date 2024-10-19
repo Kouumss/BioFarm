@@ -1,6 +1,14 @@
 img {
   transition: transform 0.2s ease !important;
+  overflow: hidden !important;
+
   &:hover {
     transform: scale(1.05) !important;
   }
+}
+
+mat-card
+{
+  background-color: rgb(255, 255, 255) !important;
+  overflow: hidden !important;
 }
