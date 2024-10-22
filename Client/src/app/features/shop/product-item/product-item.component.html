@@ -1,31 +1,15 @@
 @if(product) {
-  <mat-card appearance="raised" class="max-w-xs mx-auto">
+  <mat-card appearance="raised" class="max-w-48 mx-auto">
     <img class="rounded-t-xl w-full h-auto" src="{{product.pictureUrl}}" alt="image of {{product.name}}">
     <mat-card-content class="mt-2 p-4">
-      <h2 class="text-sm font-semibold uppercase">{{product.name}}</h2>
+      <h3 class="text-sm font-extrabold uppercase ellipsis">{{product.name}}</h3>
       <p class="font-light">{{product.price | currency:'EUR'}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-stroked-button class="w-full">
-        <mat-icon>add_shopping_cart</mat-icon>
-        Add to cart
+      <button class="button">
+        <mat-icon class="me-2">add_shopping_cart</mat-icon>
+        Buy
       </button>
     </mat-card-actions>
   </mat-card>
   }
-
-<!-- @if(product) {
-<mat-card appearance="raised">
-  <img class="rounded-t-xl" src="{{product.pictureUrl}}" alt="image of {{product.name}}">
-  <mat-card-content class="mt-2">
-    <h2 class="text-sm font-semibold uppercase">{{product.name}}</h2>
-    <p class="font-light ">{{product.price | currency:'EUR'}}</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-stroked-button class="w-full">
-      <mat-icon>add_shopping_cart</mat-icon>
-      Add to cart
-    </button>
-  </mat-card-actions>
-</mat-card>
-} -->

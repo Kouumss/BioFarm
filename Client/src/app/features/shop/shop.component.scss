@@ -1,71 +1,116 @@
 .shop-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Une seule colonne */
-  gap: 0.75rem;
-  margin: 0.5rem;
-  width: 85%;
-}
-
-.option {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr 1fr !important;
-  gap: 0.75rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
   align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.shop-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin-top: 2.6rem;
+  padding: 0.75rem;
+  width: 85%;
+  // background-color: rgba(0, 0, 0, 0.1);
+  // border-bottom: 2px solid green;
+  // border-top: 2px solid green;
+  // transition: background-color 0.3s, box-shadow 0.3s;
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 80% !important;
   justify-content: center;
-}
-form{
-  width: 100% !important;
+  padding: 1.2rem;
+  gap: 1.2rem;
+  border-radius: 0.5rem;
+  background-color: #eaeaea;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2), 5px 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2.6rem;
 }
 
-form input{
-  width: 100% !important;
+app-product-item > mat-card{
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2), 5px 0 10px rgba(0, 0, 0, 0.2);
 }
 
-mat-paginator .mat-mdc-paginator-container {
-  display: flex !important;
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  grid-column: span 2;
+}
+
+.search-form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 2px 5px black (0, 0, 0, 0.2);
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-items: center;
+  justify-content: start;
+  gap: 1.8rem;
+}
+
+.filter-button,
+.sort-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+mat-paginator {
+  * {
+    color: #FFFFFF !important;
+    font-size: 1rem;
+    font-weight: 600;
+    }
+}
+
+mat-option{
+ background: transparent !important;
+
+  *{
+    color: black !important;
+  }
+
+}
+.paginator {
+  background: transparent !important;
+  grid-column: span 3;
+  margin-top: 1.3rem;
+}
+
+.paginator .mat-mdc-paginator-container {
+  display: flex;
   justify-content: center !important;
-  background-color: #FFF;
 }
 
-@media (min-width: 1280px) {
-  .option {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
 
-@media (max-width: 1094px) and (min-width: 768px) {
-    .option {
-    grid-template-columns: 1fr 1fr !important;
-  }
-  .shop-container{
-    width: 95% !important;
-  }
-  mat-paginator{
-    flex-basis: 100% !important;
-    grid-column: span 2 !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .option {
-    grid-template-columns: 1fr 1fr !important;
-  }
-  mat-paginator{
-    flex-basis: 100% !important;
-    grid-column: span 2 !important;
-  }
-}
-
-@media (max-width: 425px) {
-  .option {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.95rem !important;
-  }
-  .search{
-    width: 100% !important;
-  }
-  mat-paginator .mat-mdc-paginator-page-size {
-    display: none !important;
-  }
-}

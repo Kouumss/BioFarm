@@ -47,7 +47,7 @@ export class ShopComponent implements OnInit {
     { name: 'Price High-Low', value: 'priceDesc' },
   ]
   shopParams = new ShopParams();
-  pageSizeOptions = [5,10,15,20,25,30]
+  pageSizeOptions = [5,10,15,20,30]
 
   // ============================
   // Méthodes

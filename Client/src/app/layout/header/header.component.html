@@ -1,45 +1,48 @@
-<header class="border-b shadow-md w-full">
-  <nav class="flex justify-between items-center p-3 shadow-lg max-w-screen-2xl mx-auto">
-    <!-- Logo -->
-    <div class="overflow-hidden w-16 h-16 lg:w-20 lg:h-20 rounded-lg">
-      <img src="/images/logo.png" alt="app logo" class="w-full h-full object-cover transform scale-125 transition-transform duration-300">
+<header [ngClass]="{'header-scrolled': isScrolled}">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/images/logo.png" alt="app logo">
     </div>
-    <!-- Menu Toggle pour Mobile -->
-    <div class="md:hidden">
-      <button id="menu-toggle" (click)="toggleMenu()" class="burger">
-        <svg class="w-8 h-8" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-    </div>
-    <!-- Menu Desktop -->
-    <ul class="hidden md:flex items-center space-x-6 font-semibold text-lg">
-      <li class="hover:text-green-400 transition-colors">Home</li>
-      <li class="hover:text-green-400 transition-colors">Contact</li>
-      <li class="hover:text-green-400 transition-colors">Details</li>
-      <li class="hover:text-green-400 transition-colors">Product</li>
+    <button id="menu-toggle" class="burger">
+      <svg class="burger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Recipe</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
-    <!-- Actions -->
-    <div class="hidden md:flex items-center space-x-4">
-      <a matBadge="5" matBadgeSize="large" class="flex items-center">
-        <mat-icon class="text-3xl">shopping_cart</mat-icon>
-      </a>
-      <button mat-stroked-button class="border border-white  hover:bg-white hover:text-black transition-colors px-4 py-2 rounded">Login</button>
-      <button mat-stroked-button class="border border-white  hover:bg-white hover:text-black transition-colors px-4 py-2 rounded">Register</button>
+    <div class="actions">
+      <i class="fas fa-shopping-cart text-2xl"></i>
+      <button class="button">
+        <mat-icon class="login-icon me-2">lock</mat-icon>
+        Login</button>
+      <button class="button">
+        <mat-icon class="register-icon me-2">person_add</mat-icon>
+        Register</button>
     </div>
   </nav>
-
-  <!-- Menu Mobile -->
-  <div *ngIf="isMenuOpen" class="mobile-menu md:hidden bg-black text-white p-4">
-    <ul class="flex flex-col items-start space-y-2 uppercase font-semibold text-lg">
-      <li class="hover:text-green-400 transition-colors">Home</li>
-      <li class="hover:text-green-400 transition-colors">Contact</li>
-      <li class="hover:text-green-400 transition-colors">Details</li>
-      <li class="hover:text-green-400 transition-colors">Product</li>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu hidden">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Recipe</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
-    <div id="button-mobile-menu"class="flex flex-row space-x-2 mt-4">
-      <button mat-stroked-button class="bg-transparent border border-white text-white hover:bg-white hover:text-black transition-colors px-4 py-2 rounded">Login</button>
-      <button mat-stroked-button class="bg-transparent border border-white text-white hover:bg-white hover:text-black transition-colors px-4 py-2 rounded">Register</button>
+    <div class="mobile-actions">
+      <button class="button">
+        <mat-icon class="login-icon me-2">lock</mat-icon>
+        Login</button>
+      <button class="button">
+        <mat-icon class="register-icon me-2">person_add</mat-icon>
+        Register</button>
     </div>
   </div>
 </header>

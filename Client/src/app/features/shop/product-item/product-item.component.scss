@@ -7,8 +7,28 @@ img {
   }
 }
 
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
 mat-card
 {
-  background-color: rgb(255, 255, 255) !important;
+  background-color: #FFFFFF !important;
+  color: black !important;
   overflow: hidden !important;
+}
+
+h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
+}
+mat-card-actions{
+  display: flex;
+  justify-content: center;
 }
