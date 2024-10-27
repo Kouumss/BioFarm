@@ -28,7 +28,7 @@ import { CarouselComponent } from "../carousel/carousel.component";
     MatPaginator,
     FormsModule,
     CarouselComponent,
-],
+  ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
   encapsulation: ViewEncapsulation.None
@@ -48,13 +48,13 @@ export class ShopComponent implements OnInit {
   products?: Pagination<Product>;
 
   sortOptions = [
-    { name: 'Alphabétique', value: 'name' },
-    { name: 'Prix: Bas-Haut', value: 'priceAsc' },
-    { name: 'Prix Haut-Bas', value: 'priceDesc' },
+    { name: 'Alphabetical', value: 'name' },
+    { name: 'Price: Low-High', value: 'priceAsc' },
+    { name: 'Price High-Low', value: 'priceDesc' },
   ]
 
   shopParams = new ShopParams();
-  pageSizeOptions = [5,10,15,20,30]
+  pageSizeOptions = [5, 10, 15, 20, 30]
 
   // ============================
   // Methods
@@ -90,13 +90,13 @@ export class ShopComponent implements OnInit {
     })
   }
 
-  onSearchChange(){
+  onSearchChange() {
     this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
 
-  handlePageEvent(event: PageEvent){
+  handlePageEvent(event: PageEvent) {
     this.shopParams.pageNumber = event.pageIndex + 1;
     this.shopParams.pageSize = event.pageSize;
     this.getProducts();

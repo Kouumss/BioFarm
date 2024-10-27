@@ -1,6 +1,6 @@
 /* Navbar opaque lors du défilement */
 .header-scrolled {
-  background-color: #c6c6c620 !important; /* Fond opaque lors du scroll */
+  background-color: #fcfcfc70 !important; /* Fond opaque lors du scroll */
   backdrop-filter: blur(10px);
   a{
     &.active{
@@ -29,17 +29,15 @@ header{
     transition: backdrop-filter 0.3s ease; /* Transition douce */
   }
 }
-// Custom Class Header
 
+// Custom Class Header
 .bg-transparent {
-  background-color: transparent !important; // Fond transparent pour la page d'accueil
+  background-color: transparent !important; 
   backdrop-filter: blur(5px);
   *, a{
     color: white !important;
   }
 }
-
-//
 
 .navbar {
   display: flex;
