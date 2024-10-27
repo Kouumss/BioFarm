@@ -1,0 +1,83 @@
+@use "@angular/material" as mat;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  max-width: 100vw;
+  color: black;
+  background-color: #FCFEFD;
+  font-optical-sizing: auto;
+  font-style: normal;
+ overflow-x: hidden;
+}
+
+a, p, h1, h2, h3, h4, button, span,
+.mat-mdc-paginator-page-size,
+.mat-mdc-paginator-range-label,
+mdc-checkbox {
+  font-family: "Roboto", cursive !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.btn {
+  background-color: #7FC242;
+  @apply flex justify-center h-10 px-4 py-2 text-white font-medium rounded-lg shadow-lg transition duration-200 ease-in-out hover:bg-green-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50;
+}
+
+
+
+// // BUTTON
+// .button {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   max-height: 5vh;
+//   width: 9vw;
+//   padding: 18px;
+//   margin: 5px;
+//   font-family: Arial, sans-serif;
+//   font-size: 16px;
+//   font-weight: 400 !important;
+//   text-decoration: none;
+//   border: 1px solid #FFFFFF;
+//   border-radius: 15px;
+//   background-color: #c0c1c276 !important;
+//   backdrop-filter: blur(5px);
+//   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+//   transition: background-color 0.3s, box-shadow 0.3s;
+// }
+
+// .button:hover {
+//   border: 1px solid #FFFFFF;
+//   color: white;
+//   background-color: rgba(0, 0, 0, 0.665) !important;
+//   cursor: pointer;
+// }
