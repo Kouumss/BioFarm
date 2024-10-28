@@ -1,7 +1,14 @@
-<header [ngClass]="{'header-scrolled': isScrolled}">
+<header [ngClass]="{
+  'header-scrolled': isScrolled && !isHomePage,
+  'heart' : isHomePage,
+  'bg-transparent': isHomePage,
+  'text-white': isHomePage,
+   }">
   <nav class="navbar">
+
+
     <div class="logo">
-      <img src="/images/logo.png" alt="app logo">
+      <img routerLink="/" src="assets/images/logo.png" alt="app logo">
     </div>
     <button id="menu-toggle" class="burger">
       <svg class="burger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -9,19 +16,24 @@
       </svg>
     </button>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">Newsletter</a></li>
-      <li><a href="#">Recipe</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a routerLink="" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active"  >Home</a></li>
+      <li><a routerLink="shop" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Shop</a></li>
+      <li><a routerLink="gallery" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Gallery</a></li>
+      <li><a routerLink="newsletter" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Newsletter</a></li>
+      <li><a routerLink="recipe" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Recipe</a></li>
+      <li><a routerLink="contact" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Contact</a></li>
     </ul>
-    <div class="actions">
-      <i class="fas fa-shopping-cart text-2xl"></i>
-      <button class="button">
+
+    <div class="flex gap-3 emot">
+      <i class="heart fa-regular fa-heart text-3xl text-red-600"></i>
+      <i class="fas fa-shopping-cart text-3xl"></i>
+    </div>
+
+    <div class="flex gap-3 actions">
+      <button class="btn">
         <mat-icon class="login-icon me-2">lock</mat-icon>
         Login</button>
-      <button class="button">
+      <button class="btn">
         <mat-icon class="register-icon me-2">person_add</mat-icon>
         Register</button>
     </div>
@@ -37,10 +49,10 @@
       <li><a href="#">Contact</a></li>
     </ul>
     <div class="mobile-actions">
-      <button class="button">
+      <button class="btn text-white">
         <mat-icon class="login-icon me-2">lock</mat-icon>
         Login</button>
-      <button class="button">
+      <button class="btn text-white">
         <mat-icon class="register-icon me-2">person_add</mat-icon>
         Register</button>
     </div>

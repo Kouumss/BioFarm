@@ -1,15 +1,61 @@
 @if(product) {
+  <mat-card appearance="raised" class="product-card">
+    <div class="image-container">
+      <img class="product-image" [src]="product.pictureUrl" alt="image of {{product.name}}">
+    </div>
+    <mat-card-content class="product-content">
+      <h3 class="product-name">{{product.name}}</h3>
+      <p class="product-price">{{product.price | currency:'EUR'}}</p>
+      <p class="product-stock" [ngClass]="{'in-stock': product.quantityInStock > 0, 'out-of-stock': product.quantityInStock === 0}">
+        {{ product.quantityInStock > 0 ? 'Available' : 'Unavailable' }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="buy-button mb-1">
+        <mat-icon class="icon">add_shopping_cart</mat-icon>
+        Add to cart
+      </button>
+    </mat-card-actions>
+  </mat-card>
+}
+
+
+
+<!-- @if(product) {
+  <mat-card appearance="raised" class="product-card mx-auto">
+    <div class="image-container">
+      <img class="product-image" [src]="product.pictureUrl" alt="image of {{product.name}}">
+    </div>
+    <mat-card-content class="content">
+      <h3 class="product-name">{{product.name}}</h3>
+      <p class="product-price">{{product.price | currency:'EUR'}}</p>
+      <p class="product-stock" [ngClass]="{'in-stock': product.quantityInStock > 0, 'out-of-stock': product.quantityInStock === 0}">
+        {{ product.quantityInStock > 0 ? 'Disponible' : 'Non disponible' }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="buy-button">
+        <mat-icon class="icon">add_shopping_cart</mat-icon>
+        Buy
+      </button>
+    </mat-card-actions>
+  </mat-card>
+} -->
+
+
+
+<!-- @if(product) {
   <mat-card appearance="raised" class="max-w-48 mx-auto">
-    <img class="rounded-t-xl w-full h-auto" src="{{product.pictureUrl}}" alt="image of {{product.name}}">
+    <img class="rounded-t-xl w-full h-auto" [src]="product.pictureUrl" alt="image of {{product.name}}">
     <mat-card-content class="mt-2 p-4">
       <h3 class="text-sm font-extrabold uppercase ellipsis">{{product.name}}</h3>
       <p class="font-light">{{product.price | currency:'EUR'}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button class="button">
+      <button class="btn">
         <mat-icon class="me-2">add_shopping_cart</mat-icon>
         Buy
       </button>
     </mat-card-actions>
   </mat-card>
-  }
+  } -->

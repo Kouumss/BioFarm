@@ -1,10 +1,15 @@
 .shop-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  margin-top: 5rem !important;
+  flex: 1;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  min-height: calc(100vh - 100px);
 }
 
 .shop-options {
@@ -15,24 +20,27 @@
   margin-top: 2.6rem;
   padding: 0.75rem;
   width: 85%;
-  // background-color: rgba(0, 0, 0, 0.1);
-  // border-bottom: 2px solid green;
-  // border-top: 2px solid green;
-  // transition: background-color 0.3s, box-shadow 0.3s;
-  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  width: 80% !important;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 1.2rem;
-  gap: 1.2rem;
-  border-radius: 0.5rem;
-  background-color: #eaeaea;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2), 5px 0 10px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  // width: 90% !important;
+  // padding: 2rem 0;
+  gap: 1.5rem;
+  // border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  // box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2), 5px 0 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 2.6rem;
+}
+
+
+.product-grid .product-item {
+  flex: 1 1 calc(25% - 1.5rem); /* 25% width, accounting for gap */
+  max-width: calc(25% - 1.5rem);
+  box-sizing: border-box;
 }
 
 app-product-item > mat-card{
@@ -56,7 +64,7 @@ app-product-item > mat-card{
 .search-input {
   padding: 10px;
   font-size: 14px;
-  color: #333;
+  color: black;
   border: 1px solid #ccc;
   border-radius: 8px;
   width: 100%;
@@ -80,7 +88,7 @@ app-product-item > mat-card{
   display: flex;
   align-items: center;
   padding: 10px 15px;
-  color: white;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -88,9 +96,9 @@ app-product-item > mat-card{
 
 mat-paginator {
   * {
-    color: #FFFFFF !important;
+    color: black !important;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     }
 }
 
@@ -103,9 +111,13 @@ mat-option{
 
 }
 .paginator {
-  background: transparent !important;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  background: white !important;
+  opacity: 0.7;
   grid-column: span 3;
   margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
 }
 
 .paginator .mat-mdc-paginator-container {

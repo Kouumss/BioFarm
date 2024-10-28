@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
 import { ShopComponent } from "./features/shop/shop.component";
 import { FooterComponent } from "./layout/footer/footer.component";
+import { CarouselComponent } from './features/carousel/carousel.component';
 
 @Component({
   selector: 'app-root',

@@ -9,9 +9,10 @@ import { MatIcon } from '@angular/material/icon';
 import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
 import { MatListOption, MatSelectionList, MatSelectionListChange } from '@angular/material/list';
 import { ShopParams } from '../../shared/models/shopParams';
-import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorIntl, PageEvent } from '@angular/material/paginator';
 import { Pagination } from '../../shared/models/pagination';
 import { FormsModule } from '@angular/forms';
+import { CarouselComponent } from "../carousel/carousel.component";
 
 @Component({
   selector: 'app-shop',
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     MatListOption,
     MatMenuTrigger,
     MatPaginator,
-    FormsModule
+    FormsModule,
+    CarouselComponent,
   ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
@@ -34,8 +36,12 @@ import { FormsModule } from '@angular/forms';
 export class ShopComponent implements OnInit {
 
   // ============================
-  // Propriétés
+  // Properties
   // ============================
+
+  placeholderText: string = 'Enter your search by name, type or brand';
+  dynamicPlaceholder: string = '';
+  typingSpeed: number = 110;
 
   private shopService = inject(ShopService);
   private dialogService = inject(MatDialog);
@@ -46,11 +52,12 @@ export class ShopComponent implements OnInit {
     { name: 'Price: Low-High', value: 'priceAsc' },
     { name: 'Price High-Low', value: 'priceDesc' },
   ]
+
   shopParams = new ShopParams();
-  pageSizeOptions = [5,10,15,20,30]
+  pageSizeOptions = [5, 10, 15, 20, 30]
 
   // ============================
-  // Méthodes
+  // Methods
   // ============================
 
   ngOnInit(): void {
@@ -61,6 +68,19 @@ export class ShopComponent implements OnInit {
     this.shopService.getBrands();
     this.shopService.getTypes();
     this.getProducts();
+    this.startTypingEffect();
+  }
+
+  startTypingEffect(): void {
+    let charIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (charIndex < this.placeholderText.length) {
+        this.dynamicPlaceholder += this.placeholderText.charAt(charIndex);
+        charIndex++;
+      } else {
+        clearInterval(typingInterval); // Stop effect after completed
+      }
+    }, this.typingSpeed);
   }
 
   getProducts() {
@@ -70,13 +90,13 @@ export class ShopComponent implements OnInit {
     })
   }
 
-  onSearchChange(){
+  onSearchChange() {
     this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
 
-  handlePageEvent(event: PageEvent){
+  handlePageEvent(event: PageEvent) {
     this.shopParams.pageNumber = event.pageIndex + 1;
     this.shopParams.pageSize = event.pageSize;
     this.getProducts();
