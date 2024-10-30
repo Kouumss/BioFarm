@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { MatBadge } from '@angular/material/badge';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon'
-import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouteService } from '../../core/services/route.service';
 
 @Component({
   selector: 'app-header',
@@ -20,14 +21,15 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/ro
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
   isMenuOpen = false;
   isHomePage: boolean = false;
   isScrolled: boolean = false;
 
-  constructor(private router: Router) {}
+  private routeService = inject(RouteService);
 
   ngOnInit(): void {
-    this.checkRoute();
+    this.checkIfHomePage();
     this.handleScroll();
   }
 
@@ -35,19 +37,15 @@ export class HeaderComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  checkRoute() {
-    this.router.events.subscribe(() => {
-      this.isHomePage = this.router.url === '/home' || this.router.url === '/';
+  checkIfHomePage(): void {
+    this.routeService.isHomePage$.subscribe(isHome => {
+      this.isHomePage = isHome;
     });
   }
 
   handleScroll() {
     window.addEventListener('scroll', () => {
-      if (!this.isHomePage) {
         this.isScrolled = window.scrollY > 10;
-      } else {
-        this.isScrolled = false;
-      }
     });
   }
 }
@@ -64,5 +62,15 @@ export class HeaderComponent {
   // @HostListener('window:scroll', [])
   // onWindowScroll() {
   //   this.isScrolled = window.scrollY > 0; // Vérifie si la page a été défilée
+  // }
+
+  // handleScroll() {
+  //   window.addEventListener('scroll', () => {
+  //     if (!this.isHomePage) {
+  //       this.isScrolled = window.scrollY > 10;
+  //     } else {
+  //       this.isScrolled = false;
+  //     }
+  //   });
   // }
 

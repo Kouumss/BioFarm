@@ -1,5 +1,5 @@
 <header [ngClass]="{
-  'header-scrolled': isScrolled && !isHomePage,
+  'header-scrolled': isScrolled,
   'heart' : isHomePage,
   'bg-transparent': isHomePage,
   'text-white': isHomePage,
@@ -16,12 +16,13 @@
       </svg>
     </button>
     <ul class="nav-links">
-      <li><a routerLink="" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active"  >Home</a></li>
-      <li><a routerLink="shop" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Shop</a></li>
-      <li><a routerLink="gallery" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Gallery</a></li>
-      <li><a routerLink="newsletter" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Newsletter</a></li>
-      <li><a routerLink="recipe" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Recipe</a></li>
-      <li><a routerLink="contact" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" >Contact</a></li>
+      <li><a routerLink="" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="shop" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Shop</a></li>
+      <li><a routerLink="gallery" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Gallery</a></li>
+      <li><a routerLink="newsletter" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Newsletter</a>
+      </li>
+      <li><a routerLink="recipe" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Recipe</a></li>
+      <li><a routerLink="contact" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Contact</a></li>
     </ul>
 
     <div class="flex gap-3 emot">

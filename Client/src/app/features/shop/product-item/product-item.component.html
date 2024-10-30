@@ -1,5 +1,5 @@
-@if(product) {
-  <mat-card appearance="raised" class="product-card">
+@if (product) {
+  <mat-card appearance="raised" class="product-card" (click)="openModal($event)">
     <div class="image-container">
       <img class="product-image" [src]="product.pictureUrl" alt="image of {{product.name}}">
     </div>
@@ -11,13 +11,17 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button class="buy-button mb-1">
-        <mat-icon class="icon">add_shopping_cart</mat-icon>
+      <button class="buy-button">
+        <mat-icon>add_shopping_cart</mat-icon>
         Add to cart
       </button>
     </mat-card-actions>
   </mat-card>
+
+  <!-- Modal -->
+  <app-product-details *ngIf="selectedProduct" [product]="selectedProduct" (close)="closeModal()"></app-product-details>
 }
+
 
 
 

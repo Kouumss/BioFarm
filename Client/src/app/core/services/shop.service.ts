@@ -24,6 +24,7 @@ export class ShopService {
   // Méthodes
   // ============================
 
+
   getProducts(shopParams: ShopParams) {
 
     let params = new HttpParams();
@@ -54,6 +55,11 @@ export class ShopService {
         console.log('API Response:', response);
       }));
   }
+
+  getProduct(id: string){
+    return this.http.get<Product>(this.baseUrl + 'products/' + id);
+  }
+
 
   getBrands() {
     if (this.brands.length > 0) return;
