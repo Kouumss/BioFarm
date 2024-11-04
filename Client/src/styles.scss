@@ -69,7 +69,9 @@ span,
 .mat-mdc-paginator-range-label,
 mdc-checkbox {
   font-family: inherit;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
 }
 
 .mdc-notched-outline-notch {

@@ -41,14 +41,13 @@ $background-gradient: linear-gradient(to bottom, #92c756, #64c567);
       flex-direction: column;
       align-items: center;
       color: #FFFFFF;
+      
 
       h3 {
         font-size: 1.5rem;
         margin-bottom: 10px;
         font-weight: bold;
-        background: $title-gradient;
-        -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
+        color: #FFFFFF;
         text-shadow: $title-shadow;
       }
 
