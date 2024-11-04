@@ -1,0 +1,80 @@
+
+<!-- 'Roboto', sans-serif; -->
+
+
+<section class="farmer">
+  <h2>🌿 Meet Our Passionate Farmers 🌱</h2>
+  <div class="farmer-cards-container" #farmerCardsContainer>
+    <div *ngFor="let farmer of farmers" class="farmer-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img [src]="farmer.image" alt="{{ farmer.name }}" class="farmer-photo" />
+          <h3>{{ farmer.name }}</h3>
+          <p><i class="fa-solid fa-location-arrow"></i> {{ farmer.location }}</p>
+        </div>
+        <div class="card-back">
+          <h2>📖 Story</h2>
+            <h3>👨‍🌾 {{ farmer.name }}</h3>
+              <p>📍 {{ farmer.location }}</p>
+              <p>🌱 {{ farmer.specialty }}</p>
+              <p>✉️ <a class="ms-2" [href]="'mailto:' + farmer.contact">{{ farmer.contact }}</a></p>
+              <p class="farmer-story">📖 {{ farmer.story }}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- <section class="farmer">
+  <h2>🌿 Meet Our Passionate Farmers 🌱</h2>
+  <div class="farmer-cards-container" #farmerCardsContainer>
+    <div *ngFor="let farmer of farmers" class="farmer-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img [src]="farmer.image" alt="{{ farmer.name }}" class="farmer-photo" />
+          <h3>{{ farmer.name }}</h3>
+          <p class="location">📍 {{ farmer.location }}</p>
+        </div>
+        <div class="card-back">
+          <div class="back-content">
+            <h2>📖 Story</h2>
+            <h3>👨‍🌾 {{ farmer.name }}</h3>
+            <p class="location">📍 {{ farmer.location }}</p>
+            <p class="specialty">🌱 Specialty: {{ farmer.specialty }}</p>
+            <p class="email">✉️ Mail: <a [href]="'mailto:' + farmer.contact">{{ farmer.contact }}</a></p>
+            <p>{{ farmer.story }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- <section class="farmer">
+  <div class="farmer-banner">
+    <h2>🌿 Meet Our Passionate Farmers 🌱</h2>
+    <div class="farmer-cards-container" #farmerCardsContainer>
+      <div *ngFor="let farmer of farmers">
+        <mat-card class="farmer-card" *ngIf="farmer">
+          <mat-card-header>
+            <div mat-card-avatar class="farmer-avatar">
+              <img [src]="farmer.image" alt="{{ farmer.name }}" class="farmer-photo" />
+            </div>
+            <mat-card-title>{{ farmer.name }}</mat-card-title>
+            <mat-card-subtitle>📍 {{ farmer.location }}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image [src]="farmer.image" alt="{{ farmer.name }}'s Image" class="farmer-main-image" />
+          <mat-card-content class="farmer-content">
+            <h3>👨‍🌾 {{ farmer.name }}</h3>
+            <p class="location">📍 {{ farmer.location }}</p>
+            <p class="specialty">🌱 <strong>Specialty: </strong> {{ farmer.specialty }}</p>
+            <p class="email-link">✉️ <strong>Mail: </strong> <a [href]="'mailto:' + farmer.contact">{{ farmer.contact
+                }}</a></p>
+            <p class="farmer-story">📖 {{ farmer.story }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section> -->

@@ -1,0 +1,166 @@
+.farmer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  position: relative; // pour positionner l'overlay
+
+  background-image: url("/assets/images/fond-ble.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  overflow: hidden; // pour éviter les débordements d'overlay
+
+  // // Overlay pour le fond en rgba
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-color: rgba(0, 0, 0, 0.5); // ajuste l'opacité et la couleur selon le besoin
+  //   z-index: 1;
+  // }
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+    z-index: 2;
+  }
+
+  .farmer-cards-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: calc(3 * 350px + 3 * 1.6rem);
+    padding: 1rem;
+    margin-left: 1rem;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    z-index: 2;
+
+
+    &::-webkit-scrollbar {
+      height: 10px;
+      background: transparent;
+      display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+    }
+
+    .farmer-card {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: 350px;
+      min-height: 450px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      perspective: 1000px;
+      transition: transform 0.8s ease;
+      // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.9s;
+        transform-style: preserve-3d;
+        // background-color: rgba(0, 0, 0, 0.45);
+
+        // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+        .card-front,
+        .card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
+          background-color: rgba(255, 254, 254, 0.774);
+          backface-visibility: hidden;
+          // background: transparent;
+
+        }
+
+        .card-front {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          img.farmer-photo {
+            width: 80%;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #2ecc71;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+
+          h3 {
+            font-size: 1.8rem;
+            color: black;
+            margin: 1rem 0;
+            font-weight: bold;
+          }
+
+          p {
+            font-size: 1rem;
+            color: black;
+            display: flex;
+            align-items: center;
+
+            i {
+              margin-right: 0.8rem;
+              color: #2ecc71;
+            }
+          }
+        }
+
+        .card-back {
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+          transform: rotateY(180deg);
+          padding: 1.5rem;
+
+          h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: rgb(2, 172, 81);
+          }
+
+          h3,
+          h2,
+          p {
+            padding: 0.5rem;
+            color: black !important;
+          }
+        }
+      }
+
+      &:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 $primary-color: #7FC242;
 $secondary-color: #3b3b3b;
@@ -13,7 +14,7 @@ $text-color: black;
 
 /* Variables de mise en page */
 :root {
-  --header-height: 12vh;
+  --header-height: 15vh;
 }
 
 :host {
@@ -35,22 +36,50 @@ body {
   flex-direction: column;
   background-color: $background-color;
   color: $text-color;
-  font-family: "Playwrite GB S", cursive;
+  // font-family: "Playwrite GB S", serif;
+  // font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+section {
+  height: 100vh;
+  background: linear-gradient(135deg, #c5e1a5, #8bc34a);
+
+  // border-top: 0.15rem solid black;
+}
+
+
+
+.mat-mdc-paginator-page-size {
+  font-family: "Roboto", serif !important;
 }
 
 /* Styles de typographie */
-a, p, h1, h2, h3, h4, button, span, .mat-mdc-paginator-page-size, .mat-mdc-paginator-range-label, mdc-checkbox {
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+button,
+span,
+.mat-mdc-paginator-page-size,
+.mat-mdc-paginator-range-label,
+mdc-checkbox {
   font-family: inherit;
-  font-weight: 300;
+  font-weight: 400 !important;
 }
 
-.mdc-notched-outline-notch{
+.mdc-notched-outline-notch {
   border-right-style: none !important;
 }
 
 
 .main-content {
   margin-top: var(--header-height);
+  // margin-bottom: 1.5rem;
   box-sizing: border-box;
   max-width: 100%;
   min-width: 100%;
@@ -65,19 +94,17 @@ a, p, h1, h2, h3, h4, button, span, .mat-mdc-paginator-page-size, .mat-mdc-pagin
 
 .btn {
   @apply flex justify-center h-10 px-4 py-2 text-white font-medium rounded-lg shadow-lg transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-opacity-50;
-  background-color: $primary-color;
+  background: linear-gradient(135deg, #FFC371, #FF5F6D);
+  /* Gradient pour le bouton */
+  ;
+
   &:hover {
-    background-color: darken($primary-color, 10%);
+    background: linear-gradient(135deg, #FF5F6D, #FFC371);
+    transform: scale(1.05);
     @apply shadow-xl;
   }
-}
 
-/* Footer */
-footer {
-  background-color: $secondary-color;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: auto;
+  &:focus {
+    outline: none !important;
+  }
 }
-

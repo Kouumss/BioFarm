@@ -1,0 +1,32 @@
+<div class="product-details-modal" *ngIf="product">
+  <div class="product-container">
+    <span class="close" (click)="closeModal()">&times;</span>
+
+    <div class="product-image-section">
+      <img [src]="product.pictureUrl" alt="Image du produit" class="product-image">
+    </div>
+
+    <div class="product-info-section">
+      <h1 class="product-name">{{ product.name }}</h1>
+
+      <p class="product-brand"><strong>Brand :</strong> {{ product.brand || 'Eden' }}</p>
+      <p class="product-type"><strong>Type :</strong> {{ product.type || 'Légumes' }}</p>
+      <p class="product-quantity"><strong>Quantity :</strong> {{ product.quantityInStock }}</p>
+      <p class="product-price"><strong>Price :</strong> {{ product.price | currency:'EUR' }}</p>
+
+      <div class="product-actions">
+        <div class="quantity-container">
+          <button class="btn" (click)="decreaseQuantity()">-</button>
+          <span class="quantity-display">{{ quantity }}</span>
+          <button class="btn" (click)="increaseQuantity()">+</button>
+        </div>
+
+        <button class="btn add-to-cart">
+          <mat-icon>shopping_cart</mat-icon> Add to cart
+        </button>
+      </div>
+
+      <p class="product-description"><strong>Description :</strong> {{ product.description }}</p>
+    </div>
+  </div>
+</div>

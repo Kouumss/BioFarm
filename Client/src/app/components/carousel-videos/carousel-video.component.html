@@ -1,0 +1,15 @@
+<section class="carousel-video" aria-label="Carrousel vidéo principal">
+  <div class="video-carousel">
+    <video #myVideo control class="video-carousel__video w-full h-full object-cover" autoplay muted loop>
+      <source src="assets/videos/video-farm6.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-carousel__content">
+      <h2 class="video-carousel__title">Welcome to BioFarm</h2>
+      <p class="video-carousel__description">Organic, Fresh, and Local - Just the Way You Like It.</p>
+        <div class="buy-btn">
+          <button class="btn" [routerLink]="['/shop']">Shop Now</button>
+        </div>
+    </div>
+  </div>
+</section>

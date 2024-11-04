@@ -168,7 +168,7 @@
     "PictureUrl": "assets/images/products/legume-courgette2.png",
     "Type": "Légumes",
     "Brand": "Eden",
-    "QuantityInStock": 35
+    "QuantityInStock": 0
   },
   {
     "Name": "Epinards",
@@ -195,7 +195,7 @@
     "PictureUrl": "assets/images/products/legume-navet2.png",
     "Type": "Légumes",
     "Brand": "Eden",
-    "QuantityInStock": 45
+    "QuantityInStock": 0
   },
   {
     "Name": "Oignons",
@@ -240,7 +240,7 @@
     "PictureUrl": "assets/images/products/legume-pommesdeterre1.png",
     "Type": "Légumes",
     "Brand": "Eden",
-    "QuantityInStock": 34
+    "QuantityInStock": 0
   },
   {
     "Name": "Salade Frisée",
@@ -330,6 +330,42 @@
     "PictureUrl": "assets/images/products/legumineuse-lentille1.png",
     "Type": "Légumineuse",
     "Brand": "Eden",
+    "QuantityInStock": 19
+  },
+  {
+    "Name": "Caisse de Poires",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 15,
+    "PictureUrl": "assets/images/products/caisse-poire.png",
+    "Type": "Fruit",
+    "Brand": "Garden",
+    "QuantityInStock": 19
+  },
+  {
+    "Name": "Caisse de Pommes",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 15,
+    "PictureUrl": "assets/images/products/caisse-pomme.png",
+    "Type": "Fruit",
+    "Brand": "Garden",
+    "QuantityInStock": 19
+  },
+  {
+    "Name": "Caisse d'Avocats",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 35,
+    "PictureUrl": "assets/images/products/caisse-avocat.png",
+    "Type": "Fruit",
+    "Brand": "Garden",
+    "QuantityInStock": 0
+  },
+  {
+    "Name": "Caisse de Fruits Exotique",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 35,
+    "PictureUrl": "assets/images/products/caisse-fruit-exotique.png",
+    "Type": "Fruit",
+    "Brand": "Garden",
     "QuantityInStock": 19
   }
 ]

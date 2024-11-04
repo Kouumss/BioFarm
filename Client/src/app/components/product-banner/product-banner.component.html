@@ -1,0 +1,43 @@
+<section class="banner" aria-label="Bannière des produits en vedette">
+  <div class="product-banner">
+    <h1>{{ title }}</h1>
+    <p class="product-tagline">{{ tagline }}</p>
+
+    <div class="product-list">
+      <div *ngFor="let fruit of fruitProducts$ | async" class="product-item">
+        <img [src]="fruit.pictureUrl" [alt]="fruit.name" class="product-image">
+        <div class="product-info">
+          <h2>{{ fruit.name }}</h2>
+          <p class="product-price">{{ fruit.price | currency }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="buy-btn">
+      <button class="btn" [routerLink]="['/shop']">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="banner" aria-label="Bannière des produits en vedette">
+  <div class="product-banner">
+    <h1>{{ title }}</h1>
+
+    <div class="p-3 m-2">
+      <p class="product-tagline">{{ tagline }}</p>
+    </div>
+
+    <div class="flex gap-5 justify-center items-center" > -->
+      <!-- Utilisation de *ngFor avec async pour obtenir les produits fruitiers -->
+      <!-- <img *ngFor="let fruit of fruitProducts$ | async"
+           [src]="fruit.pictureUrl"
+           [alt]="fruit.name"
+           class="product-image">
+    </div>
+
+    <div class="buy-btn">
+      <button class="btn" [routerLink]="['/shop']">Buy Now</button>
+    </div>
+  </div>
+</section> -->

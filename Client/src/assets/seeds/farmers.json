@@ -1,0 +1,83 @@
+[
+  {
+    "image": "assets/images/farmers/farmer2.png",
+    "name": "Michael Green",
+    "story": "Michael is passionate about soil health and uses permaculture techniques to grow herbs and medicinal plants.",
+    "location": "Vermont, USA",
+    "yearsExperience": 15,
+    "specialty": "Herbs and medicinal plants",
+    "contact": "michaelgreen@farmmail.com"
+  },
+  {
+    "image": "assets/images/farmers/farmer3.png",
+    "name": "Sarah Brown",
+    "story": "Sarah has been growing a wide variety of organic fruits for over a decade, with a focus on heirloom varieties.",
+    "location": "California, USA",
+    "yearsExperience": 12,
+    "specialty": "Heirloom fruits",
+    "contact": "sarahbrown@farmmail.com"
+  },
+  {
+    "image": "assets/images/farmers/farmer4.png",
+    "name": "Tom Williams",
+    "story": "Tom combines modern technology with traditional farming methods to sustainably grow high-quality vegetables.",
+    "location": "Texas, USA",
+    "yearsExperience": 18,
+    "specialty": "High-tech organic vegetables",
+    "contact": "tomwilliams@farmmail.com"
+  },
+  {
+    "image": "assets/images/farmers/farmer5.png",
+    "name": "James Clark",
+    "story": "James is dedicated to creating a community around his farm, producing everything from dairy to vegetables.",
+    "location": "Maine, USA",
+    "yearsExperience": 25,
+    "specialty": "Community-supported agriculture",
+    "contact": "jamesclark@farmmail.com"
+  },
+  {
+    "image": "assets/images/farmers/farmer6.png",
+    "name": "Ethan Black",
+    "story": "Ethan is a young, innovative farmer focused on sustainable aquaponics and vertical farming techniques.",
+    "location": "Arizona, USA",
+    "yearsExperience": 7,
+    "specialty": "Aquaponics and vertical farming",
+    "contact": "ethanblack@farmmail.com"
+  },
+  {
+    "image": "assets/images/farmers/farmer7.png",
+    "name": "Lucas White",
+    "story": "Lucas has a small vineyard where he produces organic wines with unique flavors.",
+    "location": "Napa Valley, USA",
+    "yearsExperience": 10,
+    "specialty": "Organic wine production",
+    "contact": "lucaswhite@farmmail.com"
+  },
+  {
+    "image": "assets/images/farmers/farmer8.png",
+    "name": "Oliver Smith",
+    "story": "Oliver specializes in rare herbs and spices and supplies local restaurants with fresh, organic ingredients.",
+    "location": "New York, USA",
+    "yearsExperience": 8,
+    "specialty": "Herbs and spices",
+    "contact": "oliversmith@farmmail.com"
+  },
+  {
+    "image": "assets/images/farmers/farmer9.png",
+    "name": "Emily Johnson",
+    "story": "Emily is a dedicated farmer with a passion for regenerative agriculture, focusing on soil restoration.",
+    "location": "Washington, USA",
+    "yearsExperience": 14,
+    "specialty": "Regenerative farming",
+    "contact": "emilyjohnson@farmmail.com"
+  },
+  {
+    "image": "assets/images/farmers/farmer10.png",
+    "name": "Amelia Davis",
+    "story": "Amelia uses traditional farming techniques to grow a variety of seasonal vegetables with a focus on biodiversity.",
+    "location": "Georgia, USA",
+    "yearsExperience": 22,
+    "specialty": "Seasonal vegetables and biodiversity",
+    "contact": "ameliadavis@farmmail.com"
+  }
+]

@@ -485,3 +485,10 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 BioFarm.API/appsettings.json
+
+# Ignorer les fichiers vidéo dans le dossier assets
+assets/**/*.mp4
+assets/**/*.mov
+assets/**/*.avi
+assets/**/*.mkv
+assets/**/*.webm

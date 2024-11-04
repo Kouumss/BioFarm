@@ -1,0 +1,238 @@
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.shop-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.3rem;
+  flex-direction: row-reverse;
+}
+
+.search-form {
+  display: flex;
+  width: 70%;
+}
+
+.search-input {
+  flex: 1 1;
+  padding: 0.5rem;
+  border: 1px solid #7FC242;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.search-button {
+  background-color: #7FC242;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  color: white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  padding: 2rem 0;
+  gap: 1.5rem;
+  background-color: transparent;
+}
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-item {
+    flex: 0 0 auto;
+    width: 150px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+
+    p {
+      margin: 0;
+      padding: 0.5rem;
+      background-color: #fff;
+    }
+  }
+
+.product-item {
+  flex: 0 0 auto;
+  width: 150px;
+}
+.paginator .mat-mdc-paginator-container {
+  display: flex;
+  justify-content: center !important;
+
+}
+
+.mat-mdc-paginator{
+  background-color: transparent !important;
+}
+.mat-mdc-paginator-outer-container{
+  display: flex;
+  justify-content: center;
+}
+.mat-mdc-paginator-container{
+  border-radius: 0.5rem;
+  background-color: #ffffffa6;
+
+}
+
+
+
+// .shop-container {
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   justify-items: center;
+//   align-items: center;
+//   width: 100%;
+//   margin-top: 5rem !important;
+//   flex: 1;
+//   padding-top: 1.5rem;
+//   padding-bottom: 1.5rem;
+//   min-height: calc(100vh - 100px);
+// }
+
+// .shop-options {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   justify-items: center;
+//   align-items: center;
+//   margin-top: 2.6rem;
+//   padding: 0.75rem;
+//   width: 85%;
+// }
+
+// .product-grid {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+//   width: 90% !important;
+//   padding: 2rem 0;
+//   gap: 1.5rem;
+//   // border-radius: 0.5rem;
+//   background-color: #FFFFFF;
+//   // box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2), 5px 0 10px rgba(0, 0, 0, 0.2);
+//   margin-bottom: 2.6rem;
+// }
+
+// .product-grid .product-item {
+//   flex: 1 1 calc(25% - 1.5rem); /* 25% width, accounting for gap */
+//   max-width: calc(25% - 1.5rem);
+//   box-sizing: border-box;
+// }
+
+// app-product-item > mat-card{
+//   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2), 5px 0 10px rgba(0, 0, 0, 0.2);
+// }
+
+// .search-container {
+//   display: flex;
+//   justify-content: center;
+//   width: 90%;
+//   grid-column: span 2;
+// }
+
+// .search-form {
+//   width: 100%;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+// }
+
+// .search-input {
+//   padding: 10px;
+//   font-size: 14px;
+//   color: black;
+//   border: 1px solid #ccc;
+//   border-radius: 8px;
+//   width: 100%;
+//   box-shadow: 0 2px 5px black (0, 0, 0, 0.2);
+// }
+
+// .search-button {
+//   position: absolute;
+//   right: 10px;
+// }
+
+// .action-buttons {
+//   display: flex;
+//   justify-items: center;
+//   justify-content: start;
+//   gap: 1.8rem;
+// }
+
+// .filter-button,
+// .sort-button {
+//   display: flex;
+//   align-items: center;
+//   padding: 10px 15px;
+//   color: black;
+//   border: none;
+//   border-radius: 5px;
+//   cursor: pointer;
+// }
+
+// mat-paginator {
+//   * {
+//     color: black !important;
+//     font-size: 1rem;
+//     font-weight: 400;
+//     }
+// }
+
+// mat-option{
+//  background: transparent !important;
+
+//   *{
+//     color: black !important;
+//   }
+
+// }
+// .paginator {
+//   border-radius: 0.5rem;
+//   padding: 0.4rem;
+//   background: white !important;
+//   opacity: 0.7;
+//   grid-column: span 3;
+//   margin-top: 1.3rem;
+//   margin-bottom: 1.3rem;
+// }
+
+// .paginator .mat-mdc-paginator-container {
+//   display: flex;
+//   justify-content: center !important;
+// }

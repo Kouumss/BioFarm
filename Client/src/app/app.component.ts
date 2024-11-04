@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
-import { ShopComponent } from "./features/shop/shop.component";
+import { ShopComponent } from "./pages/shop/shop.component";
 import { FooterComponent } from "./layout/footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { RouteService } from './core/services/route.service';
